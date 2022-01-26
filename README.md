@@ -16,7 +16,7 @@ Components and Concepts used :
   Key events ,
   Jasmine testing 
   
-Coverage with jasmine tests :
+Coverage -unit testing :
 
 ![coverage](https://github.com/shreyamishra1609/Angular-paycard/blob/main/coverage.png)
 
