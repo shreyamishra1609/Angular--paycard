@@ -1,0 +1,111 @@
+
+ <!-- CARD UI -->
+
+<div id="rcorners3" *ngIf="!cvvEntering" class=" w3-animate-top">
+
+  <!-- Visa chip and logo -->
+  <img src="assets/visa.png" class="visa-img">
+  <img src="assets/chip.png" class="chip-img">
+<!-- 
+  card num on card -->
+  <div class="text-box">
+    <br>
+    {{cardNum}}
+  </div>
+
+  <!-- Card holder on left side -->
+  <div class="text-box-left" style="width:60%;word-break: break-all; word-wrap: break-word;">
+    Card Holder
+    <br>
+    {{cardName}}
+  </div>
+  
+  <!-- Card date on right -->
+  <div class="text-box-right"> Expires On <br> {{cardDate}}</div>
+</div>
+
+
+<!-- CARD UI - CVV SIDE  -->
+
+<div id="rcorners3" *ngIf="cvvEntering" class=" w3-animate-top">
+
+  <img src="assets/visa.png" class="visa-img">
+
+  <div style="height:25% ; background-color: black; margin-top: 10%;"></div>
+
+  <div class="text-box-right" STYLE="padding: 3%;">
+    CVV
+  </div>
+
+  <div class="col-12"><input type="password" style="width:100%" readonly pInputText [(ngModel)]="cvv" /></div>
+</div>
+
+
+
+<!-- CARD FORM -->
+
+<p-card [style]="{'width': '40%','margin-left':'30%' ,'margin-top':'-10%','z-index':'1','box-shadow': 'rgb(38, 57, 77) 0px 20px 30px -10px'}">
+  <div style="padding-top:25%">
+
+    <!-- Card num field -->
+    <div class="grid">
+      <div class="col-6">Card Number</div>
+    </div>
+
+    <div class="grid">
+      <div class="col-12">
+        <input type="text" 
+        style="width:90%" 
+        maxlength="19" 
+        (focus)="cvvEntering=false"
+        (keydown)="enteredCardNum($event)" 
+        pInputText /></div>
+    </div>
+    <br>
+
+    <!--Card holder name-->
+    <div class="grid">
+      <div class="col-6">Card Holder Name</div>
+    </div>
+
+    <div class="grid">
+      <div class="col-12">
+        <input type="text" 
+        style="width:90%" 
+        maxlength="50" 
+        (focus)="cvvEntering=false"
+        (keyup)="enteredCardName($event)"
+        pInputText /></div>
+    </div>
+    <br>
+
+    <!-- Expiry date field -->
+    <div class="grid">
+      <div class="col-8">Expiration Date
+        <br>
+        <br>
+        <p-calendar [(ngModel)]="expiry" 
+        (onFocus)="cvvEntering=false" 
+        (ngModelChange)="expiryDate()"
+        view="month"
+        dateFormat="mm/yy" 
+        [readonlyInput]="true" 
+        inputId="monthpicker" 
+        placeholder="MM/YYYY"></p-calendar>
+      </div>
+
+      <!-- CVV field-->
+      <div class="col-3"> CVV
+        <br>
+        <br>
+
+        <input type="text" style="width:90%" 
+        (focus)="cvvEntering=true" 
+        class="cvvFocus" 
+        maxlength="3" [(ngModel)]="cvv"
+        pInputText />
+      </div>
+
+    </div>
+  </div>
+</p-card>

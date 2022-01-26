@@ -1,0 +1,72 @@
+
+#rcorners3 {
+    border-radius: 25px;
+    background: url('/assets/card-cover.jpg');
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px; 
+    width: 30%;
+    height: 250px; 
+    margin-left: 35%;
+    z-index: 999;
+    position: relative;
+    margin-top: 2%;
+    display: inline-block;
+  
+  }
+  
+  .padding-dropdown{
+    padding-right: 2% !important;
+  }
+
+
+  .text-box {
+    margin-top: 10%;
+    text-align: center;
+    margin-bottom: 8% !important;
+    padding:3%;
+    font-size:20px;
+    color: white;
+  }
+
+  .text-box-left{
+
+    float: left;
+    color: white;
+  
+  }
+
+  .text-box-right{
+    float: right;
+    color: white ;
+   
+  }
+  
+  .img-responsive {
+    display: block;
+    max-width: 100%;
+    height: 120px;
+    margin: auto;
+    padding: auto;
+  }
+  
+
+  .visa-img{
+    height:30px;
+    width: 70px;
+    float: right;
+  }
+
+  .chip-img{
+    height:40px;
+    width: 50px;
+    float: left;
+
+  }
+
+
+
+
+
+
+  
