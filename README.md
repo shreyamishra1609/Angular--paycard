@@ -3,7 +3,7 @@
 Here is an Angular (Typescript) based interactive paycard created for fun.
 
 
-![](https://github.com/shreyamishra1609/Angular-paycard/blob/main/angular-paycard.gif)
+![](https://github.com/shreyamishra1609/Angular-paycard/blob/main/angularr-paycard.gif)
 Library used : PrimeNG
 
 Components and Concepts used : 
